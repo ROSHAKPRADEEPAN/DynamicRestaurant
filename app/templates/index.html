@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Dynamic Restaurant{% endblock %}
+
+{% block content %}
+<h2>Welcome to Dynamic Restaurant</h2>
+<p>Please select an option to log in:</p>
+
+<div>
+    <form action="{{ url_for('main.login_user') }}" method="get">
+        <button type="submit">Login as User</button>
+    </form>
+    <form action="{{ url_for('main.login_admin') }}" method="get">
+        <button type="submit">Login as Admin</button>
+    </form>
+</div>
+{% endblock %}
